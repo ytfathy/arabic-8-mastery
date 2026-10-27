@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Poetry dual-column verse styling */
+.poetry-verse {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .poetry-verse {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
